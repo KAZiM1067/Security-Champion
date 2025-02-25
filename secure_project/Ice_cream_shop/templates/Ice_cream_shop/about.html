@@ -1,0 +1,55 @@
+{% extends 'Ice_cream_shop/base.html' %}
+{% load static %}
+
+{% block title %}About Us - Ice Cream Shop{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'about.css' %}">
+
+<section class="about-us">
+    <div class="container">
+        <h1>About Us</h1>
+        <p class="sub-heading">We are passionate about making delicious ice cream!</p>
+
+        <div class="about-content">
+            <div class="about-text">
+                <h2>Our Story</h2>
+                <p>
+                    Ice Cream Shop started with a simple idea: to create the creamiest, most delightful ice creams made with natural ingredients. Our vision is to deliver an unforgettable ice cream experience, offering not only the best flavors but also catering to various dietary preferences. We believe in using only fresh, sustainable ingredients to produce a variety of exciting and indulgent flavors.
+                </p>
+                <h3>Our Mission</h3>
+                <p>
+                    Our mission is to bring joy to every customer with every scoop of ice cream. We aim to provide a diverse range of options so everyone can enjoy their favorite flavors, whether they are dairy-free, low-sugar, or gluten-free.
+                </p>
+                <p>
+                    We strive to make our products with a positive environmental footprint and contribute to the well-being of our community.
+                </p>
+            </div>
+            <div class="about-image">
+                <img src="{% static 'images/Ice_cream_shop.png' %}" alt="Ice Cream Shop">
+            </div>
+        </div>
+
+        <h2 class="team-title">Meet Our Team</h2>
+
+        <div class="team-section">
+            <div class="team-member">
+                <img src="{% static 'images/John_Doe.png' %}" alt="Team Member 1">
+                <h3>John Doe</h3>
+                <p>Founder & CEO</p>
+            </div>
+            <div class="team-member">
+                <img src="{% static 'images/Jane_Smith.png' %}" alt="Team Member 2">
+                <h3>Jane Smith</h3>
+                <p>Head Chef</p>
+            </div>
+            <div class="team-member">
+                <img src="{% static 'images/Mike_Johnson.png' %}" alt="Team Member 3">
+                <h3>Mike Johnson</h3>
+                <p>Marketing Lead</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

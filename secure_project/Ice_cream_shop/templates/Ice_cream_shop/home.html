@@ -1,0 +1,392 @@
+{% extends 'Ice_cream_shop/base.html' %}
+{% load static %}
+{% block title %}Home - Ice Cream Shop{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'home.css' %}">
+<!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+<section class="hero" style="background: url('{% static 'images/slide_1-1.png' %}') no-repeat center center/cover;">
+    <div class="container">
+        <h1>Global Cuisine Meets Ice Cream</h1>
+        <p>Flavours of joyfulness</p>
+        <a href="{% url 'about' %}" class="btn btn-custom">Explore More</a>
+    </div>
+</section>
+<section class="about-section">
+    <div class="container">
+        <div class="about-content">
+            <div class="about-images">
+                <img src="{% static 'images/image_1.png' %}" class="img1" alt="Ice Cream Bowl">
+                <img src="{% static 'images/image_2.png' %}" class="img2" alt="Strawberry Ice Cream">
+            </div>
+            <div class="about-text">
+                <h2>We're Lebagol's, and we love crafting unbelievably delicious stripey tubs of joy.</h2>
+                <p>Lebagol's is a certified B Corp, as we believe in business as a force for good. We create both super
+                    indulgent and healthier products whilst treading as lightly as we can on our planet, and have
+                    reduced our carbon intensity by 21% since 2020.</p>
+
+                <ul class="about-list">
+                    <li>Scoop Shop Flavors</li>
+                    <li>Ice Cream Pints</li>
+                    <li>Frozen Yogurt Pints</li>
+                    <li>Chocolatey Love</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="promo-section">
+    <div class="promo-container">
+        <!-- First Box -->
+        <div class="promo-box promo-purple">
+            <h3>100% natural</h3>
+            <h2>All You Want!</h2>
+            <p>Smooth & refreshing, intensely flavorful, 100% dairy-free.</p>
+            <a href="#" class="btn-shop">→ Shop Now</a>
+            <img src="{% static 'images/image_3.png' %}" alt="Soft Ice Cream">
+        </div>
+
+        <!-- Second Box -->
+        <div class="promo-box promo-red">
+            <h3>EVERYONE’S FAVORITE FLAVOR</h3>
+            <h2>More Than 50 Flavors</h2>
+            <span class="sale-text">SALE</span>
+            <a href="#" class="btn-shop">→ Shop Now</a>
+            <img src="{% static 'images/image_4.png' %}" alt="Kid with Ice Cream">
+        </div>
+
+        <!-- Third Box -->
+        <div class="promo-box promo-green">
+            <h3>25% Save Off</h3>
+            <h2><em>free shipping</em></h2>
+            <p>Same day delivery for orders placed before 4:30 PM</p>
+            <a href="#" class="btn-shop">→ Shop Now</a>
+            <img src="{% static 'images/image_5.png' %}" alt="Matcha Mochi Ice Cream">
+        </div>
+    </div>
+</section>
+<section class="slider-section">
+    <h2 class="section-title">Ice Cream For Every Occasion</h2>
+    <div class="slider-container">
+        <button class="prev-btn">❮</button> <!-- Previous Button -->
+
+        <div class="slider">
+            <div class="slide">
+                <div class="product-card">
+                    <span class="badge sale">Sale</span>
+                    <img src="{% static 'images/strawberry&lingonberry.png' %}" alt="Ice Cream 1">
+                    <div class="product-info">
+                        <h3>Strawberry & Lingonberry</h3>
+                        <p class="price"><span class="discounted">$7.90</span> <span class="old-price">$8.50</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slide">
+                <div class="product-card">
+                    <span class="badge new">New</span>
+                    <img src="{% static 'images/cherry_garcia.png' %}" alt="Ice Cream 2">
+                    <div class="product-info">
+                        <h3>Cherry Garcia Ice Cream</h3>
+                        <p class="price">$11.00</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slide">
+                <div class="product-card">
+                    <span class="badge new">New</span>
+                    <img src="{% static 'images/fruit_ice_cream.png' %}" alt="Ice Cream 3">
+                    <div class="product-info">
+                        <h3>Fruit Ice Cream</h3>
+                        <p class="price">$13.00</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slide">
+                <div class="product-card">
+                    <span class="badge sale">Sale</span>
+                    <img src="{% static 'images/coffee_cookies.png' %}" alt="Ice Cream 4">
+                    <div class="product-info">
+                        <h3>Coffee Cookies</h3>
+                        <p class="price"><span class="discounted">$7.90</span> <span class="old-price">$8.50</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slide">
+                <div class="product-card">
+                    <span class="badge sale">Sale</span>
+                    <img src="{% static 'images/bubbies-mochi-ice-cream.png' %}" alt="Ice Cream 1">
+                    <div class="product-info">
+                        <h3>bubbies-mochi-ice-cream</h3>
+                        <p class="price">$8.50</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slide">
+                <div class="product-card">
+                    <span class="badge sale">Sale</span>
+                    <img src="{% static 'images/chocolate_fudge.png' %}" alt="Ice Cream 1">
+                    <div class="product-info">
+                        <h3>chocolate_fudge</h3>
+                        <p class="price"><span class="discounted">$7.90</span> <span class="old-price">$8.50</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slide">
+                <div class="product-card">
+                    <span class="badge sale">Sale</span>
+                    <img src="{% static 'images/peekaboo.png' %}" alt="Ice Cream 1">
+                    <div class="product-info">
+                        <h3>peekaboo</h3>
+                        <p class="price"><span class="discounted">$7.90</span> <span class="old-price">$8.50</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slide">
+                <div class="product-card">
+                    <span class="badge sale">Sale</span>
+                    <img src="{% static 'images/strawberry_shortcake.png' %}" alt="Ice Cream 1">
+                    <div class="product-info">
+                        <h3>strawberry_shortcake</h3>
+                        <p class="price"><span class="discounted">$7.90</span> <span class="old-price">$8.50</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button class="next-btn">❯</button> <!-- Next Button -->
+    </div>
+</section>
+
+
+<section class="pastries-section">
+    <div class="container">
+        <div class="pastries-content">
+            <!-- Left Side: Icons and Text -->
+            <div class="pastry-cards">
+                <h2 class="section-title">Pastries In Addition To Ice Cream</h2>
+                <h3 class="favorite-flavor">Favorite Flavor</h3>
+
+                <!-- Card 1 -->
+                <!-- Feature List Without Cards -->
+                <div class="feature-list">
+                    <!-- Feature 1 -->
+                    <div class="feature">
+                        <i class="bi bi-cone icon"></i>
+                        <div class="feature-text">
+                            <h4>Pick your flavor</h4>
+                            <p>From our gourmet lineup of handcrafted ice cream</p>
+                        </div>
+                    </div>
+
+                    <!-- Feature 2 -->
+                    <div class="feature">
+                        <i class="bi bi-emoji-smile icon"></i>
+                        <div class="feature-text">
+                            <h4>Handcrafted</h4>
+                            <p>Premium ice cream and cookies</p>
+                        </div>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div class="feature">
+                        <i class="bi bi-truck icon"></i>
+                        <div class="feature-text">
+                            <h4>Ship your gift</h4>
+                            <p>With guaranteed frozen delivery nationwide</p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <div class="buttons">
+                    <a href="#" class="btn-find">Find out more</a>
+                    <a href="#" class="btn-ingredients">Our ingredients</a>
+                </div>
+            </div>
+
+            <!-- Right Side: Image -->
+            <div class="image-container">
+                <img src="{% static 'images/image_7.png' %}" alt="Ice Cream Cones">
+            </div>
+        </div>
+    </div>
+</section>
+<section class="product-section">
+    <div class="container">
+        <h2 class="section-title">Find your perfect pint!</h2><br>
+
+        <div class="tabs">
+            <button class="tab active">Top Seller</button>
+            <button class="tab">Top Trending</button>
+            <button class="tab">New Products</button>
+        </div>
+
+        <div class="product-grid">
+            <!-- Product 1 -->
+            <div class="product-card">
+                <span class="badge sale">Sale</span>
+                <img src="{% static 'images/strawberry&lingonberry.png' %}" alt="Product 1">
+                <h4>Strawberry & Lingonberry</h4>
+                <p class="price">$7.90 <span class="old-price">$8.50</span></p>
+                <div class="product-footer">
+                    <span class="rating">★★★★★</span>
+                    <span class="price">$7.90</span>
+                </div>
+                <a href="#" class="btn-cart">🛒</a>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card">
+                <span class="badge new">New</span>
+                <img src="{% static 'images/fruit_ice_cream.png' %}" alt="Product 2">
+                <h4>Fruit Ice Cream</h4>
+                <p class="price">$13.00</p>
+                <div class="product-footer">
+                    <span class="rating">★★★★★</span>
+                    <span class="price">$13.00</span>
+                </div>
+                <a href="#" class="btn-cart">🛒</a>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card">
+                <span class="badge sale">Sale</span>
+                <img src="{% static 'images/cherry_garcia.png' %}" alt="Product 1">
+                <h4>Cherry Garcia Ice Cream</h4>
+                <p class="price">$7.90 <span class="old-price">$8.50</span></p>
+                <div class="product-footer">
+                    <span class="rating">★★★★★</span>
+                    <span class="price">$7.90</span>
+                </div>
+                <a href="#" class="btn-cart">🛒</a>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="product-card">
+                <span class="badge new">New</span>
+                <img src="{% static 'images/coffee_cookies.png' %}" alt="Product 2">
+                <h4>Coffee Cookies</h4>
+                <p class="price">$13.00</p>
+                <div class="product-footer">
+                    <span class="rating">★★★★★</span>
+                    <span class="price">$13.00</span>
+                </div>
+                <a href="#" class="btn-cart">🛒</a>
+            </div>
+            <!-- Add more products here -->
+
+        </div><br>
+        <div class="product-grid">
+            <!-- Product 5 -->
+            <div class="product-card">
+                <span class="badge sale">Sale</span>
+                <img src="{% static 'images/bubbies-mochi-ice-cream.png' %}" alt="Product 1">
+                <h4>bubbies-mochi-ice-cream</h4>
+                <p class="price">$7.90 <span class="old-price">$8.50</span></p>
+                <div class="product-footer">
+                    <span class="rating">★★★★★</span>
+                    <span class="price">$7.90</span>
+                </div>
+                <a href="#" class="btn-cart">🛒</a>
+            </div>
+
+            <!-- Product 6 -->
+            <div class="product-card">
+                <span class="badge new">New</span>
+                <img src="{% static 'images/chocolate_fudge.png' %}" alt="Product 2">
+                <h4>chocolate_fudge</h4>
+                <p class="price">$13.00</p>
+                <div class="product-footer">
+                    <span class="rating">★★★★★</span>
+                    <span class="price">$13.00</span>
+                </div>
+                <a href="#" class="btn-cart">🛒</a>
+            </div>
+
+            <!-- Product 7 -->
+            <div class="product-card">
+                <span class="badge sale">Sale</span>
+                <img src="{% static 'images/strawberry.png' %}" alt="Product 1">
+                <h4>strawberry</h4>
+                <p class="price">$7.90 <span class="old-price">$8.50</span></p>
+                <div class="product-footer">
+                    <span class="rating">★★★★★</span>
+                    <span class="price">$7.90</span>
+                </div>
+                <a href="#" class="btn-cart">🛒</a>
+            </div>
+
+            <!-- Product 8 -->
+            <div class="product-card">
+                <span class="badge new">New</span>
+                <img src="{% static 'images/strawberry_shortcake.png' %}" alt="Product 2">
+                <h4>strawberry_shortcake</h4>
+                <p class="price">$13.00</p>
+                <div class="product-footer">
+                    <span class="rating">★★★★★</span>
+                    <span class="price">$13.00</span>
+                </div>
+                <a href="#" class="btn-cart">🛒</a>
+            </div>
+            <!-- Add more products here -->
+
+        </div>
+
+        <div class="view-all">
+            <a href="#" class="btn-view-all">View All Products</a>
+        </div>
+    </div>
+</section>
+<section class="news-section">
+    <div class="container">
+        <h2 class="section-title">Our News</h2>
+        <h3 class="sub-title">Tastiest Updates</h3>
+
+        <div class="news-grid">
+            <!-- News 1 -->
+            <div class="news-card">
+                <img src="{% static 'images/strawberry.png' %}" alt="The Best Ice Cream">
+                <div class="news-info">
+                    <p class="news-date">Business Tips - Jun 30, 2024</p>
+                    <h4>The Best Ice Cream You’ll Never Eat</h4>
+                    <a href="#" class="btn-read-more">Read More</a>
+                </div>
+            </div>
+
+            <!-- News 2 -->
+            <div class="news-card">
+                <img src="{% static 'images/fruit_ice_cream.png' %}" alt="Fancy Figs">
+                <div class="news-info">
+                    <p class="news-date">Business Tips - Jun 30, 2024</p>
+                    <h4>Fancy Figs? Make This Ice Cream</h4>
+                    <a href="#" class="btn-read-more">Read More</a>
+                </div>
+            </div>
+
+            <!-- News 3 -->
+            <div class="news-card">
+                <img src="{% static 'images/coffee_cookies.png' %}" alt="The Art Of Crafting Gourmet Ice Cream">
+                <div class="news-info">
+                    <p class="news-date">Business Tips - Jun 30, 2024</p>
+                    <h4>The Art Of Crafting Gourmet Ice Cream</h4>
+                    <a href="#" class="btn-read-more">Read More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Load the JavaScript file -->
+<script src="{% static 'js/image_slider.js' %}"></script>
+
+{% endblock %}

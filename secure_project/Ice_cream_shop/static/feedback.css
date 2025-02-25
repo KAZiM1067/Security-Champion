@@ -1,0 +1,145 @@
+/* Feedback Form Container */
+.feedback-form-container {
+    background-color: #fff;
+    max-width: 500px;
+    margin: 110px auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Success Message */
+.success-message {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+/* Form Title */
+h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Form Group */
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/* Label Styling */
+label {
+    font-weight: bold;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Input and Textarea Styling */
+input[type="text"],textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+/* Textarea specific styling */
+textarea {
+    resize: none;
+    height: 100px;
+}
+
+/* Styling for Range Slider */
+input[type="range"] {
+
+    width: 100%; /* Ensures full width */
+    height: 10px;
+    background: linear-gradient(to right, #2196F3 0%, #2196F3 100%);
+    border-radius: 5px;
+    outline: none;
+    transition: opacity .15s ease-in-out;
+}
+
+/* Track Styling */
+input[type="range"]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 10px;
+    background: #2196F3;
+    border-radius: 5px;
+}
+
+/* Thumb (Handle) Styling */
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: white;
+    border: 2px solid #2196F3;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-top: -5px;
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: white;
+    border: 2px solid #2196F3;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Ensuring Full Min & Max Visibility */
+.rating-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rating-container span {
+    font-size: 14px;
+    color: #333;
+    font-weight: bold;
+}
+
+input[type="range"]:focus {
+    outline: none;
+}
+
+/* Max Length Message */
+small {
+    display: block;
+    font-size: 14px;
+    color: #888;
+    margin-top: 5px;
+}
+
+/* Submit Button Styling */
+.btn-submit {
+    background-color: #ff3366;
+    color: white;
+    padding: 12px 30px;
+    font-size: 16px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: #cc0052;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .feedback-form-container {
+        padding: 20px;
+        margin: 20px;
+    }
+}

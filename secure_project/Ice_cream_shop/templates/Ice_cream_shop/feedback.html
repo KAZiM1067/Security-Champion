@@ -1,0 +1,67 @@
+{% extends 'Ice_cream_shop/base.html' %}
+{% load static %}
+
+{% block title %}Customer Feedback - Ice Cream Shop{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'feedback.css' %}">
+<script>
+    function updateRatingValue(val) {
+        document.getElementById("ratingValue").innerText = val;
+    }
+</script>
+
+<div class="feedback-form-container">
+
+    <!-- Show Success or Error Messages -->
+    {% if messages %}
+        <div class="messages">
+            {% for message in messages %}
+                <div class="alert {% if message.tags == 'success' %}alert-success{% elif message.tags == 'error' %}alert-danger{% endif %}">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
+
+    <h2>Customer Feedback</h2>
+    <form action="{% url 'feedback' %}" method="POST" class="feedback-form">
+        {% csrf_token %}
+
+        <div class="form-group">
+            <label for="author">Author</label>
+            <input type="text" id="author" name="author" placeholder="Enter your name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="comment">Comment</label>
+            <textarea id="comment" name="comment" placeholder="Write your feedback..." maxlength="160"
+                required></textarea>
+            <small>Max. 160 characters</small>
+        </div>
+
+        <div class="form-group">
+            <label for="rating">Rating: <span id="ratingValue">3</span></label>
+             <!-- Container for Rating Scale -->
+    <div class="rating-container">
+        <input type="range" id="rating" name="rating" min="1" max="5" value="3" oninput="updateRatingValue(this.value)">
+    </div>
+</div>
+
+        <div class="form-group">
+            <label for="captcha">CAPTCHA: What is 5+5?</label>
+            <input type="text" id="captcha" name="captcha" placeholder="Result" required>
+        </div>
+
+        <button type="submit" class="btn-submit">Submit</button>
+    </form>
+</div>
+
+
+{% endblock %}
+
+<script>
+    function updateRatingValue(val) {
+        document.getElementById("ratingValue").innerText = val;
+    }
+</script>

@@ -1,0 +1,20 @@
+{% extends 'Ice_cream_shop/base.html' %}
+{% load static %}
+{% block title %}Login - Ice Cream Shop{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'login_signup.css' %}">
+<div class="login-form-container">
+    <h2>Login</h2>
+    <!-- In your login.html form -->
+<form method="POST" action="{% url 'login' %}?next={{ request.GET.next }}">
+
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn-submit">Login</button>
+    </form>
+    <div class="form-links"><br>
+        <p>Don't have an account? <a href="{% url 'signup' %}">Sign up</a></p>
+    </div>
+</div>
+{% endblock %}

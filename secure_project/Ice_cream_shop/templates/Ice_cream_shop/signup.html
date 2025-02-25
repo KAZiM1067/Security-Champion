@@ -1,0 +1,48 @@
+{% extends 'Ice_cream_shop/base.html' %}
+{% load static %}
+{% block title %}Sign Up - Ice Cream Shop{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'login_signup.css' %}">
+<div class="signup-form-container">
+    <h2>Sign Up</h2>
+
+    <!-- Display success message if it exists -->
+    {% if messages %}
+        <div class="alert">
+            {% for message in messages %}
+                <p>{{ message }}</p>
+            {% endfor %}
+        </div>
+    {% endif %}
+    <form method="POST">
+        {% csrf_token %}
+        <!-- Render each field without displaying errors -->
+        <div class="form-field">
+            <label for="{{ form.username.id_for_label }}">Username:</label>
+            {{ form.username }}
+        </div>
+        
+        <div class="form-field">
+            <label for="{{ form.email.id_for_label }}">Email:</label>
+            {{ form.email }}
+        </div>
+        
+        <div class="form-field">
+            <label for="{{ form.password1.id_for_label }}">Password:</label>
+            {{ form.password1 }}
+        </div>
+
+        <div class="form-field">
+            <label for="{{ form.password2.id_for_label }}">Confirm Password:</label>
+            {{ form.password2 }}
+        </div>
+
+        <!-- Submit button -->
+        <button type="submit" class="btn-submit">Sign Up</button>
+    </form>
+    <div class="form-links"><br>
+        <p>Already have an account? <a href="{% url 'login' %}">Login</a></p>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,103 @@
+/* General Styles */
+body {
+    font-family: 'Raleway', sans-serif;
+    background-color: #f5f5f5;
+}
+
+/* Form Container */
+.login-form-container{
+    width: 400px;
+    margin: 216px auto;
+    background-color: #fff;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+.signup-form-container {
+    width: 400px;
+    margin: 60px auto;
+    background-color: #fff;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input {
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+form input[type="password"] {
+    font-family: 'Raleway', sans-serif;
+}
+
+button {
+    padding: 12px 20px;
+    font-size: 18px;
+    background-color: #ff3366;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #cc0052;
+}
+
+/* Optional: Add Error and Success Message Styles */
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.success-message {
+    color: green;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+/* Hide validation error messages */
+ul.errorlist {
+    display: none;
+}
+
+/* Hide small help texts such as password rules */
+small {
+    display: none;
+}
+/* Form Field Styles */
+.form-field {
+    margin-bottom: 20px;
+}
+
+.form-field label {
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.form-field input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+
